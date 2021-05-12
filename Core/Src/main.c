@@ -22,6 +22,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "ST7565.h"
+#include "fonts.h"
 
 /* USER CODE END Includes */
 
@@ -89,13 +91,22 @@ int main(void)
   MX_GPIO_Init();
   MX_SPI1_Init();
   /* USER CODE BEGIN 2 */
-
+  ST7565_Init();
+//  HAL_Delay(1000);
+//  ST7565_Draw_pixel(5, 5, 1);
+  HAL_Delay(1000);
+  ST7565_Clear();
+  HAL_Delay(1000);
+  ST7565_Print(1, 1, "Hallo", &Font_16x26, 1, 1);
+  //HAL_Delay(3000);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+    HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
+    HAL_Delay(200);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

@@ -10,23 +10,13 @@
 #ifndef _FONTS_H
 #define _FONTS_H
 
+#define FONT_6x8
+#define FONT_7x9
+#define FONT_11x18
+#define FONT_16x26
+// Только цифры -- only numbers
+#define FONT_16x28	
 
-//##############################################################################################################
-
-//---- для экономии памяти шрифты которые не используються закоментировать -------------------------------------
-			// Шрифт имеет кирилицу и латиницу
-			#define FONT_6x8		//  6 x 8 pixels font size structure 
-			#define FONT_7x9		//  7 x 9 pixels font size structure 
-			#define FONT_11x18		//  11 x 18 pixels font size structure 
-			#define FONT_16x26		//  16 x 26 pixels font size structure 
-			// Только цифры -- only numbers
-			#define FONT_16x28		//  16 x 28 pixels font size structure only numbers	
-//--------------------------------------------------------------------------------------------------------------
-
-//##############################################################################################################
-
-
-/* C++ detection */
 #ifdef __cplusplus
 extern C {
 #endif
@@ -35,11 +25,9 @@ extern C {
  *
  * Default fonts library. It is used in all LCD based libraries.
  *
- * \par Supported fonts
- * 
+ * \par Supported fonts 
  */
-// Обязательно нужен #include "main.h" 
-// чтоб отдельно не подключать файлы связанные с МК и стандартными библиотеками
+
 #include "main.h"
 
 #include "string.h"
